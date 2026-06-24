@@ -51,35 +51,38 @@ uma camada. Baixo acoplamento, alta coesão.
 
 ---
 
-## 4. Estrutura de pastas (proposta)
+## 4. Estrutura de pastas
 
-> Será criada de fato na **Fase 3** (ambiente). Aqui definimos o desenho e a
-> responsabilidade de cada pasta.
+> O projeto foi criado com `create-next-app` (Next 16) usando o layout padrão:
+> `app/` fica na **raiz** (sem pasta `src/`). As pastas `components/`, `lib/` e
+> `server/` serão criadas conforme o desenvolvimento (Fase 4). O alias de import
+> `@/*` aponta para a raiz do projeto.
 
 ```
 bebida-loja/
-├── docs/                      # documentação (já existe)
+├── app/                       # CAMADA DE APRESENTAÇÃO (Next.js App Router) — já existe
+│   ├── (loja)/                # páginas públicas (catálogo, produto, carrinho)   [Fase 4]
+│   ├── (conta)/               # páginas do cliente (login, pedidos)              [Fase 4]
+│   ├── admin/                 # painel administrativo                            [Fase 4]
+│   ├── api/                   # CAMADA DE ENTRADA DO BACK-END (rotas HTTP)        [Fase 4]
+│   ├── layout.tsx             # layout raiz (já existe)
+│   ├── page.tsx               # página inicial (já existe)
+│   └── globals.css            # estilos globais (já existe)
+├── components/                # componentes React reutilizáveis (UI "burra")     [Fase 4]
+├── features/                  # código agrupado por domínio (produtos, carrinho) [Fase 4]
+├── server/                                                                       # [Fase 4/5]
+│   ├── services/              # CAMADA DE NEGÓCIO (regras de negócio)
+│   └── repositories/          # CAMADA DE DADOS (acesso via Prisma)
+├── lib/                       # utilitários e o cliente Prisma compartilhado     [Fase 4]
 ├── prisma/
-│   └── schema.prisma          # modelo do banco (Fase 5)
-├── public/                    # imagens estáticas, ícones
-├── src/
-│   ├── app/                   # CAMADA DE APRESENTAÇÃO (Next.js App Router)
-│   │   ├── (loja)/            # páginas públicas (catálogo, produto, carrinho)
-│   │   ├── (conta)/           # páginas do cliente (login, pedidos)
-│   │   ├── admin/             # painel administrativo
-│   │   └── api/               # CAMADA DE ENTRADA DO BACK-END (rotas HTTP)
-│   ├── components/            # componentes React reutilizáveis (UI "burra")
-│   ├── features/              # código agrupado por domínio (produtos, carrinho, pedidos)
-│   ├── server/
-│   │   ├── services/          # CAMADA DE NEGÓCIO (regras de negócio)
-│   │   └── repositories/      # CAMADA DE DADOS (acesso via Prisma)
-│   ├── lib/                   # utilitários e o cliente Prisma compartilhado
-│   └── types/                 # tipos TypeScript compartilhados
-├── .env                       # segredos (NÃO vai para o Git)
-├── .gitignore
+│   └── schema.prisma          # modelo do banco                                  [Fase 5]
+├── public/                    # imagens estáticas, ícones (já existe)
+├── docs/                      # documentação (já existe)
+├── .env                       # segredos (NÃO vai para o Git)                    [Fase 4]
+├── .gitignore                 # criado pelo Next (já existe)
 ├── .gitattributes             # já existe
-├── package.json
-└── next.config.js
+├── package.json               # já existe
+└── next.config.ts             # já existe
 ```
 
 ### Responsabilidade de cada pasta

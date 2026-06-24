@@ -2,7 +2,7 @@
 
 Plataforma web de e-commerce para uma loja de bebidas, responsiva (desktop, tablet e celular).
 
-> **Status:** 🟡 Fase 3 — Ambiente de desenvolvimento
+> **Status:** 🟢 Fase 4 — Desenvolvimento
 
 ## Visão Geral
 
