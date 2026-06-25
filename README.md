@@ -14,18 +14,18 @@ o sistema inclui verificação de maioridade.
 
 A documentação técnica do projeto fica na pasta [`docs/`](./docs):
 
-| Documento | Descrição |
-|-----------|-----------|
-| [`docs/01-requisitos.md`](./docs/01-requisitos.md) | Requisitos funcionais e não-funcionais |
+| Documento                                              | Descrição                                   |
+| ------------------------------------------------------ | ------------------------------------------- |
+| [`docs/01-requisitos.md`](./docs/01-requisitos.md)     | Requisitos funcionais e não-funcionais      |
 | [`docs/02-casos-de-uso.md`](./docs/02-casos-de-uso.md) | Casos de uso (passo a passo das interações) |
-| [`docs/03-fluxos.md`](./docs/03-fluxos.md) | Fluxos visuais (diagramas Mermaid) |
-| [`docs/04-arquitetura.md`](./docs/04-arquitetura.md) | Decisões de arquitetura e stack |
+| [`docs/03-fluxos.md`](./docs/03-fluxos.md)             | Fluxos visuais (diagramas Mermaid)          |
+| [`docs/04-arquitetura.md`](./docs/04-arquitetura.md)   | Decisões de arquitetura e stack             |
 
 ## Roadmap (Fases)
 
 - [x] **Fase 1** — Planejamento
 - [x] **Fase 2** — Arquitetura
-- [ ] **Fase 3** — Ambiente de desenvolvimento _(em andamento)_
+- [x] **Fase 3** — Ambiente de desenvolvimento _(em andamento)_
 - [ ] **Fase 4** — Desenvolvimento (módulo por módulo)
 - [ ] **Fase 5** — Banco de dados
 - [ ] **Fase 6** — Integrações (pagamentos, notificações)
