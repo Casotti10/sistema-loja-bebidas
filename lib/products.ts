@@ -28,25 +28,25 @@ const products: Product[] = [  //lista de produtos
 
     {
     id: 2,
-    slug: "vinho-cabeertnet0sauvigon",
-    name: "vinho-Cabeertnet0sauvigon",
-    description: "Vinho tinto seco, ecnorpado, 750ml", 
-    priceInCents: 1290, //preço em centavos (1290 = 12,90)
-    category: "Vinhos", 
-    stock: 14, //quantidade em estoque 
-    imageUrl: ""
-}, 
+    slug: "vinho-cabernet-sauvignon",
+    name: "Vinho Cabernet Sauvignon 750ml",
+    description: "Vinho tinto seco, encorpado 750ml.",
+    priceInCents: 4990,
+    category: "Vinhos",
+    stock: 14,
+    imageUrl: "",
+  },
 
 {
     id: 3,
     slug: "whisky-jack-daniels-1l",
     name: "Whisky Jack Daniel's 1L",
-    description: "Vinho tinto seco, ecnorpado, 750ml", 
-    priceInCents: 1290, //preço em centavos (1290 = 12,90)
-    category: "Destilados", 
-    stock: 14, //quantidade em estoque 
+    description: "Whisky 750ml",
+    priceInCents: 12000, //preço em centavos (1290 = 12,90)
+    category: "Destilados",
+    stock: 14, //quantidade em estoque
     imageUrl: ""
-}, 
+},
 {
     id: 4,
     slug: "vodka-absolut-1l",
