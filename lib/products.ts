@@ -80,7 +80,15 @@ const products: Product[] = [  //lista de produtos
 ];
 
 export async function getProducts(): Promise<Product[]> { //porta de entrada dos dados - async busca no banco e a assncroniza.
-  return products;
+  return products;  
+}
+
+//função reebe o slug(nome) do produto, procura na lista e devolve ele, se n a achar devolve null
+export async function getProductBySlug(slug: string): Promise<Product | null> {  
+  
+  const product = products.find((p) => p.slug === slug); //percorre a lista e devolve o primeiro produto cujo slug bate com o pedido (ou undefined se nenhum bater)
+ 
+  return product ?? null; //se não achou (undefined), devolve null. Padronizar em null deixa o tipo de retorno explícito: Promise<Product | null> ("ou um produto, ou nada").
 }
 
 
