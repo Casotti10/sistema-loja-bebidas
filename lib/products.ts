@@ -92,3 +92,8 @@ export async function getProductBySlug(slug: string): Promise<Product | null> {
 }
 
 
+//devolve a lista de categorias unicas presentes no catálogo, na ordem em que aparecem. 
+export async function getCategories(): Promise<string[]> { 
+  const categorias = new Set(products.map((p) => p.category));
+  return Array.from(categorias);
+}
